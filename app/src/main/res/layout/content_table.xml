@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.app.ordering.orderingsystem.Table"
+    tools:showIn="@layout/activity_table">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:paddingTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/usertb"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:text=""
+            android:textSize="20dp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Select Table"
+            android:textSize="28dp"/>
+
+        <Spinner
+            android:paddingLeft="30dp"
+            android:id="@+id/spn_TableNumber"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|center_horizontal|right"
+        android:paddingBottom="30dp"
+        android:paddingRight="60dp">
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/btn_finishTable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        fancy:fb_borderColor="#FFFFFF"
+        fancy:fb_borderWidth="1dp"
+        fancy:fb_defaultColor="@color/primary"
+        fancy:fb_focusColor="@color/colorAccent"
+        fancy:fb_fontIconSize="15sp"
+        fancy:fb_iconPosition="right"
+        fancy:fb_radius="30dp"
+        fancy:fb_text="    Finish    "
+        fancy:fb_textSize="18dp"
+        fancy:fb_textColor="#FFFFFF"
+        android:layout_gravity="bottom|center_horizontal|right">
+
+    </mehdi.sakout.fancybuttons.FancyButton>
+
+    </LinearLayout>
+
+</FrameLayout>
