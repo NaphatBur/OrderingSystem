@@ -31,7 +31,11 @@
         <activity
             android:name=".Order"
             android:label="@string/title_activity_order"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FabMenuList"
+            android:label="@string/title_activity_fab_menu_list"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

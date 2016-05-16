@@ -15,7 +15,7 @@
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="40dp"
             android:background="@color/colorAccent"
             app:popupTheme="@style/AppTheme.PopupOverlay" >
 
@@ -24,6 +24,16 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 >
+
+                <TextView
+                    android:id="@+id/tlb_tabName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:gravity="left"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"/>
 
                 <TextView
                     android:id="@+id/tlb_tableNum"
@@ -52,7 +62,7 @@
             </android.support.v7.widget.Toolbar>
 
         <android.support.design.widget.TabLayout
-            android:background="@color/colorPrimary"
+            android:background="@color/colorAccent"
             android:layout_alignParentTop="true"
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"
@@ -61,6 +71,8 @@
             app:tabMaxWidth="0dp"
             app:tabMode="fixed"
             app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="3dp"
             />
 
 
@@ -70,12 +82,42 @@
 
     <include layout="@layout/content_main" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@android:drawable/ic_dialog_email" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <MainActivity.Adapter.FabMenu
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/blueTwitter"/>
+
+        <com.gordonwong.materialsheetfab.DimOverlayFrameLayout
+            android:id="@+id/overlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <io.codetail.widget.RevealLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|bottom"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/fab_sheet"
+                android:layout_width="400dp"
+                android:layout_height="match_parent">
+
+                <!-- TODO: Put your sheet items here -->
+                <include layout="@layout/activity_fab_menu_list" />
+
+            </android.support.v7.widget.CardView>
+
+        </io.codetail.widget.RevealLinearLayout>
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
